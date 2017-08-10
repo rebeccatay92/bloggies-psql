@@ -1,0 +1,12 @@
+<h1>All posts by <%= current_user.name %></h1>
+
+<ul>
+<% @all_posts.eachdo |post| %>
+  <li>
+    <h3><%= post.title %></h3>
+    <p><%= post.content %></p>
+  </li>
+<% end %>
+</ul>
+
+<%= @all_posts.inspect %>
