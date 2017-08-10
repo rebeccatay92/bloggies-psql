@@ -1,0 +1,8 @@
+<h1>Show one post</h1>
+
+<h3>Post by <%= @post.user.name %></h3>
+<h3><%= @post.title %></h3>
+<p><%= @post.content %></p>
+
+<%= link_to "Edit this post", edit_post_path%>
+<%= link_to "Back to all posts", posts_path %>

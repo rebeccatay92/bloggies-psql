@@ -1,0 +1,13 @@
+<h1>Edit this post</h1>
+<%= @current_post %>
+
+<%= form_for @current_post do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <br>
+  <%= f.hidden_field :user_id %>
+  <%= f.submit %>
+<% end %>
