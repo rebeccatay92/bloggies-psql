@@ -1,6 +1,27 @@
 <h1>All posts by <%= current_user.name %></h1>
 
+<%= @nasa_data.inspect %>
+
 <ul>
+  <li>
+    <h3><%= @nasa_data["title"] %><h3>
+    <h3><%= @nasa_data["date"] %><h3>
+    <h3><%= @nasa_data["explanation"] %><h3>
+      <%= image_tag @nasa_data["url"] %>
+  </li>
+</ul>
+
+
+<!-- <ul>
+  <% @news_data["articles"].each do |article| %>
+    <li>
+      <h3><%= article["title"] %></h3>
+      <p><%= article["description"] %> </p>
+    </li>
+  <% end %>
+</ul> -->
+
+<!-- <ul>
 <% @all_posts.each do |post| %>
   <% if post.id %>
     <li>
@@ -22,4 +43,4 @@
   <br>
   <%= f.hidden_field :user_id %>
   <%= f.submit %>
-<% end %>
+<% end %> -->

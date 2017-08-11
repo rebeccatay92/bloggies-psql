@@ -2,8 +2,16 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    news_url = "https://newsapi.org/v1/articles?source=cnn&sortBy=top&apiKey=02f2dbf25dba4fe6a729d06435c930f6"
+    news_response = HTTParty.get(news_url)
+    @news_data =  news_response
+    #
     @all_posts = current_user.posts
     @new_post = current_user.posts.new
+
+    nasa_url="https://api.nasa.gov/planetary/apod?api_key=ww84bTPNZtpFDjapAhFl3cJjiIGcSGnJSEXvR2VY"
+    nasa_response = HTTParty.get(nasa_url)
+    @nasa_data = nasa_response
   end
 
   def show
