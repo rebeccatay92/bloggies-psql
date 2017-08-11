@@ -1,11 +1,3 @@
-<h1>Static#home</h1>
-<p>Find me in app/views/static/home.html.erb</p>
+<% provide(:title, 'Homepage') %>
 
-<% if current_user %>
-  <!-- true -->
-  <%= link_to "Log Out", destroy_user_session_path , method: :delete %>
-<% else %>
-  <!-- false -->
-  <%= link_to "Log In", new_user_session_path %>
-  <%= link_to "Register", new_user_registration_path %>
-<% end %>
+<p>Find me in app/views/static/home.html.erb</p>

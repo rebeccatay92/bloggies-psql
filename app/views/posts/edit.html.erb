@@ -1,5 +1,6 @@
-<h1>Edit this post</h1>
-<%= @current_post %>
+<% provide(:title, "Edit post with title: #{@current_post.title}") %>
+
+<!-- <%= @current_post %> -->
 
 <%= form_for @current_post do |f| %>
   <%= f.label :title %>
