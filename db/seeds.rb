@@ -36,3 +36,7 @@
 #   post_id: 4
 #   )
 # end
+
+# 5.times do |i|
+#   Tag.create(name: "Tag##{i + 1}")
+# end
